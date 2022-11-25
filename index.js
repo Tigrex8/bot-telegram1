@@ -6,7 +6,7 @@ const webAppUrl = '/'
 const bot = new Telegraf('5704330474:AAHqYZkRVHyPZCfWFMAlOfLPxqwR2ri05jE')
 
 bot.command('/start',   ctx => {
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -15,18 +15,19 @@ bot.command('/start',   ctx => {
                 ],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
-
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                  /*  {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
-
             ]
-
         }
-
-
     })
 })
 
@@ -57,7 +58,7 @@ bot.action('order', ctx =>{
 
 bot.action('menu', ctx =>{
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -65,11 +66,17 @@ bot.action('menu', ctx =>{
                     {text: '🚚Доставка', callback_data: 'delivery'}],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
 
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                /*    {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
             ]
 
@@ -97,7 +104,7 @@ bot.action('delivery', ctx =>{
 
 bot.action('menu', ctx =>{
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -105,11 +112,17 @@ bot.action('menu', ctx =>{
                     {text: '🚚Доставка', callback_data: 'delivery'}],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
 
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                /*    {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
             ]
 
@@ -138,7 +151,7 @@ bot.action('information', ctx =>{
 
 bot.action('menu', ctx =>{
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -146,11 +159,17 @@ bot.action('menu', ctx =>{
                     {text: '🚚Доставка', callback_data: 'delivery'}],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
 
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                /*    {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
             ]
 
@@ -183,7 +202,7 @@ bot.action('payment', ctx =>{
 
 bot.action('menu', ctx =>{
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -191,11 +210,17 @@ bot.action('menu', ctx =>{
                     {text: '🚚Доставка', callback_data: 'delivery'}],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
 
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                  /*  {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
             ]
 
@@ -207,7 +232,7 @@ bot.action('menu', ctx =>{
 
 bot.action('review', ctx =>{
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -215,11 +240,17 @@ bot.action('review', ctx =>{
                     {text: '🚚Доставка', callback_data: 'delivery'}],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
 
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                 /*   {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
             ]
 
@@ -230,7 +261,7 @@ bot.action('review', ctx =>{
 })
 bot.action('menu', ctx =>{
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который поможет тебе легко и просто сделать заказ кроссовок любимого бренда в любое время.', {
+    bot.telegram.sendMessage(ctx.chat.id, 'Привет, я – бот, который с удовольствием поможет тебе просто и быстро сделать заказ любых вещей любимых брендов круглосуточно ❤️', {
         reply_markup: {
             inline_keyboard: [
                 [
@@ -238,11 +269,17 @@ bot.action('menu', ctx =>{
                     {text: '🚚Доставка', callback_data: 'delivery'}],
                 [
                     {text: 'ℹИнформация', callback_data: 'information'},
-                    {text: '💳Оплата', callback_data: 'payment'},
+                    {text: '💳Расчет стоимости', callback_data: 'payment'},
                 ],
                 [
                     {text: '📝Отзывы', url: 'https://t.me/+SYqso9GWo4k2ZmEy'},
 
+                ],
+                [
+                    {text: '🛠Тех поддержка', url: 'https://t.me/poizon_store_help'}
+                ],
+                [
+                /*    {text: '📱Калькулятор', callback_data: 'calculated'}*/
                 ]
             ]
 
@@ -251,7 +288,18 @@ bot.action('menu', ctx =>{
 
     })
 })
-
+bot.action('calculated', ctx =>{
+    ctx.deleteMessage()
+    bot.telegram.sendMessage(ctx.chat.id, 'Введите сумму в юанях:', {
+        reply_markup: {
+            inline_keyboard: [
+                [
+                    {text: 'Назад в меню', callback_data: 'menu'},
+                ]
+            ]
+        }
+    })
+})
 
 
 bot.launch()
